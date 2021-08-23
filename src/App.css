@@ -1,0 +1,120 @@
+
+.app {
+    margin: 0;
+    padding: 0;
+}
+
+/* this for Signup Comp*/
+.main {
+    display: flex;
+    position: relative;
+    text-align: right;
+    color: #3b3b3b;
+    font-family: 'Lato',Verdana, sans-serif;
+  }
+  .centered{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.contents {
+    position: relative;
+    overflow: hidden;
+}
+.contents:after {
+    content: "";
+    display: block;
+    height: 320%;
+    position: absolute;
+    left: 20%;
+    right: -50%;
+    bottom: -100%;
+    background-color: #b9dff580;
+    transform: rotate(-45deg);
+  } 
+
+  /* this for Title Comp*/
+  h4 {
+    overflow: hidden;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: -20px;
+    padding-bottom: 20px;
+  }
+  
+  
+  h4:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  
+
+  h4:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+    /* this for Small Card Comp*/
+  .container_scroll {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    padding-top: 0px;
+  }
+  .center-col {
+    flex: 1;
+    overflow-y: scroll;
+
+  }
+  .card:hover {
+    background-color: #eee;
+  }
+/* this for Big Card Comp*/
+.big_card{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 98.4%;
+    margin-bottom: 20px;
+    min-height: 55vh;
+    
+ 
+}
+
+
+
+
+  ::-webkit-scrollbar {
+    width: 6px;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #03327e;
+  }
+
+  .flex-column a{
+    color: #777;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-left: 10px;
+  }
