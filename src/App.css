@@ -36,7 +36,7 @@
   } 
 
   /* this for Title Comp*/
-  h4 {
+  h4.title{
     overflow: hidden;
     text-align: left;
     text-transform: uppercase;
@@ -45,18 +45,18 @@
   }
   
   
-  h4:after {
-    background-color: #000;
+  h4.title:after {
+    background-color: #084170;
     content: "";
     display: inline-block;
-    height: 1px;
+    height: 2px;
     position: relative;
     vertical-align: middle;
     width: 50%;
   }
   
 
-  h4:after {
+  h4.title:after {
     left: 0.5em;
     margin-right: -50%;
   }
@@ -84,6 +84,7 @@
     width: 98.4%;
     margin-bottom: 20px;
     min-height: 55vh;
+    background-color: #eee;
     
  
 }

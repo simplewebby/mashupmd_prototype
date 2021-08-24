@@ -1,24 +1,16 @@
 import './App.css';
 
-import { Container, Row, Col, Image, Card } from "react-bootstrap";
-import React, { useEffect, useState } from 'react'
+import { Row, Col, Image} from "react-bootstrap";
 import mashupMD from './components/images/mashupMD_380.png'
 import Header from './components/Header'
-import Signup from './components/Signup'
-
+import SignupBanner from './components/SignupBanner'
 import Search from './components/Search';
 import Navbar from './components/Navbar';
 import Ad from './components/Ad'
 import TrendingTopics from './components/TrendingTopics';
-import Title from './components/Title'
-
-import Small_card from './components/Small_card'
+import SmallCard from './components/SmallCard'
 
 function App() {
-
- 
-
-
 
   return (
     <div style={ { width: "90%", margin: "0 auto" } }>
@@ -34,12 +26,12 @@ function App() {
 
 
 
-        <Col xs={ 12 } md={ 8 } lg={ 10 } style={ { background: "#fff", padding: "0" } }>
+        <Col xs={ 12 } md={ 8 } lg={ 10 } style={ {  padding: "0",} }>
           <Header />
-          <Signup />
+          <SignupBanner />
           <Row>
-            <Col xs={ 12 } md={ 12 } lg={ 12 } style={ { background: "#eee", padding: "0" } }>
-                <Small_card />
+            <Col xs={ 12 } md={ 12 } lg={ 12 } style={ {  padding: "0" } }>
+                <SmallCard />
             </Col>
           </Row>
         </Col>

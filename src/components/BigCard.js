@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import '../App.css';
-import signup from '../components/images/signup.jpg'
+
 import { Image, Card } from "react-bootstrap";
 
 
-function Big_card({ user }) {
+function BigCard({ user }) {
 
     const [ userDetails, setUserDetails ] = useState();
 
@@ -55,5 +55,5 @@ function Big_card({ user }) {
     )
 }
 
-export default Big_card
+export default BigCard
 

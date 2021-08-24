@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import { Image, Button } from "react-bootstrap";
+import { Image} from "react-bootstrap";
 import ad from '../components/images/cardiology.jpg'
 
 

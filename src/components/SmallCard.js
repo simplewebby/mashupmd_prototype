@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import '../App.css';
 import { Card, Row, Col } from "react-bootstrap";
-import Big_card from './Big_card'
+import BigCard from './BigCard'
 import Title from './Title'
-import signup from '../components/images/signup.jpg'
 
-const Small_card = () => {
+
+const SmallCard = () => {
     const [ users, setUsers ] = useState([]);
     const [ selectedUser, setSelectedUser ] = useState(null);
 
@@ -20,7 +20,7 @@ const Small_card = () => {
 
     return (
 
-        <Row style={ { padding: "20px 15px 10px 34px", height: "62vh", background: "#fff" } }>
+        <Row style={ { padding: "20px 15px 10px 34px", height: "62vh" } }>
             
             <Col xs={ 12 } md={ 12 } lg={ 4 } >
             <Title />
@@ -40,7 +40,7 @@ const Small_card = () => {
             </Col>
             <Col xs={ 12 } md={ 6 } lg={ 8 } style={ { padding: "0", height: "62vh" } }>
                 <div>
-                    { selectedUser ? <Big_card key={ selectedUser.id } user={ selectedUser } /> : "" }
+                    { selectedUser ? <BigCard key={ selectedUser.id } user={ selectedUser } /> : "" }
                 </div>
             </Col>
         </Row>
@@ -53,4 +53,4 @@ const Small_card = () => {
     )
 }
 
-export default Small_card
+export default SmallCard

@@ -1,11 +1,8 @@
 import React from 'react'
 import '../App.css';
-import { Container, Nav, Link } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import { BsPlus } from 'react-icons/bs';
-import { AiOutlineClockCircle } from 'react-icons/ai';
-import { FaFileMedical } from 'react-icons/fa';
-import { FaGlobeAmericas } from 'react-icons/fa';
-import { BsEnvelope } from 'react-icons/bs';
+
 
 
 function TrendingTopics() {
