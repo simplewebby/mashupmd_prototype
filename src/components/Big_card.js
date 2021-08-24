@@ -1,78 +1,57 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../App.css';
 import signup from '../components/images/signup.jpg'
 import { Image, Card } from "react-bootstrap";
 
 
-function Big_card({ data }) {
+function Big_card({ user }) {
+
+    const [ userDetails, setUserDetails ] = useState();
+
+
+    useEffect(() => {
+        (async () => {
+            const resp = await fetch(`https://jsonplaceholder.typicode.com/photos/${ user.id }`);
+            const json = await resp.json();
+            setUserDetails(json);
+        })();
+    }, [ user ]);
+
+
     return (
-        <>
 
-            { data.map((character) => (
-              
-                    <div className="container_detail">
-
-
-                    <Card className="big_card" key={ character.id }>
+        <div className="container_detail">
+            { userDetails && (
+                <>
+                    <Card className="big_card" >
                         <Card.Body>
                             <Card.Title style={ { fontSize: "24px" } }>
 
-                                { character.species }
+                                { userDetails.title }
                             </Card.Title>
                             <Card.Text>
-                                { character.url }
+                                { userDetails.url }
                             </Card.Text>
-                            <div style={ { display: "flex", flexDirection: "row", gap: "20px" } }>
-                                <Image src={ character.image } roundedCircle style={ { width: "80px", height: "80px", objectFit: "cover" } } />
-                                <div>
-                                    <Card.Title>
-                                        { character.name }
-                                    </Card.Title>
-                                    <Card.Text>
-                                        { character.gender }
 
-                                    </Card.Text>
-                                </div>
-                            </div>
 
                             <div style={ { display: "flex", flexDirection: "row", gap: "20px", marginTop: "20px" } }>
-                                <Image src={ signup } roundedCircle style={ { width: "80px", height: "80px", objectFit: "cover" } } />
+                                <Image src={ userDetails.thumbnailUrl } roundedCircle style={ { width: "80px", height: "80px", objectFit: "cover" } } />
                                 <div>
                                     <Card.Title>
-                                        Hany Ragy
+                                        { userDetails.title }
                                     </Card.Title>
-                                    <Card.Text>
-                                        There you have it in @NEJM. Pfizer is ~90% effective against
-                                        delta. AstraZeneca is ~70%. This is similar to effectiveness
-                                        against other variants, including alpha. Vaccines work, even
-                                        against variants. Get vaccinated if you haven't already. https://
-                                        t.co/FV1Rr5fiVa - view on twitter
-                                    </Card.Text>
+
                                 </div>
                             </div>
-                            <div style={ { display: "flex", flexDirection: "row", gap: "20px", marginTop: "20px" } }>
-                                <Image src={ signup } roundedCircle style={ { width: "80px", height: "80px", objectFit: "cover" } } />
-                                <div>
-                                    <Card.Title>
-                                        Hany Ragy
-                                    </Card.Title>
-                                    <Card.Text>
-                                        There you have it in @NEJM. Pfizer is ~90% effective against
-                                        delta. AstraZeneca is ~70%. This is similar to effectiveness
-                                        against other variants, including alpha. Vaccines work, even
-                                        against variants.
-                                    </Card.Text>
-                                </div>
-                            </div>
+
                         </Card.Body>
 
                     </Card>
+                </>
+            ) }
+        </div>
 
-                </div>
-                
-               
-            )) }
-        </>
+
     )
 }
 
