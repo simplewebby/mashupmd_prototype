@@ -5,7 +5,7 @@ function Search() {
         <Form>
             <Form.Group as={ Row } className="mb-3" controlId="">
 
-                <Col sm="12">
+                <Col sm="10">
                     <Form.Control type="text" placeholder="Post to reading list" />
                 </Col>
             </Form.Group>

@@ -28,8 +28,8 @@ const SmallCard = () => {
               
                     <div className="center-col" >
                         { users.map(u => (
-                            <Card key={ u.id } onClick={ () => setSelectedUser(u) } style={ { display: "flex", flexDirection: "row", width: "100%", maxWidth: "420px", height: "160px", marginBottom: "20px" } }>
-                                <Card.Img src={ u.thumbnailUrl } style={ { width: "160px", height: "160px", objectFit: "cover" } } />
+                            <Card key={ u.id } onClick={ () => setSelectedUser(u) } style={ { display: "flex", flexDirection: "row", width: "100%", maxWidth: "440px", width: "100%", height: "120px", marginBottom: "20px" } }>
+                                <Card.Img src={ u.thumbnailUrl } style={ { width: "120px", height: "120px", objectFit: "cover" } } />
                                 <Card.Body>
                                     <Card.Text > { u.title } </Card.Text>
                                 </Card.Body>

@@ -16,8 +16,8 @@ function Home() {
 
             <Row>
                 <Col className="left-sidebar" 
-                style={ { background: "#eee", height: "100vh !important", paddingLeft: "60px"} }>
-                    <Image style={ { width: "100%", margin: "10px auto" } } src={ mashupMD } alt="mashupLogo" />
+                style={ { background: "#eee", height: "100vh !important", paddingLeft: "1.7%"} }>
+                    <Image style={ { width: "70%", margin: "10px auto" } } src={ mashupMD } alt="mashupLogo" />
                     <Search />
                     <Navbar />
                   <Ad />
