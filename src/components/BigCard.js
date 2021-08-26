@@ -56,4 +56,3 @@ function BigCard({ user }) {
 }
 
 export default BigCard
-

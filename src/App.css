@@ -2,6 +2,7 @@
 .app {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 /* this for Signup Comp*/
@@ -81,7 +82,7 @@
     margin-top: 40px;
     display: flex;
     flex-direction: row;
-    width: 98.4%;
+    max-width: 91.4%;
     margin-bottom: 20px;
     min-height: 55vh;
     background-color: #eee;
@@ -119,3 +120,37 @@
     font-size: 14px;
     padding-left: 10px;
   }
+
+  .left-sidebar {
+    max-width: 20% !important;
+  }
+  .right-content {
+    min-width: 80% !important;
+  }
+
+@media (max-width: 1440px) {
+  .left-sidebar {
+    max-width: 23% !important;
+  }
+  .right-content {
+    min-width: 77% !important;
+  }
+}
+@media (max-width: 1024px) {
+  .left-sidebar {
+    max-width: 30% !important;
+  }
+  .right-content {
+    min-width: 70% !important;
+  }
+}
+
+
+@media (max-width: 414px) {
+  .left-sidebar {
+    max-width: 100% !important;
+  }
+  .right-content {
+    min-width: 100% !important;
+  }
+}

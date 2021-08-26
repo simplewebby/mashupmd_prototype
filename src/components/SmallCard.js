@@ -22,13 +22,13 @@ const SmallCard = () => {
 
         <Row style={ { padding: "20px 15px 10px 34px", height: "62vh" } }>
             
-            <Col xs={ 12 } md={ 12 } lg={ 4 } >
+            <Col xs={ 12} md={4} lg={ 4 } >
             <Title />
                 <div className="container_scroll">
               
                     <div className="center-col" >
                         { users.map(u => (
-                            <Card key={ u.id } onClick={ () => setSelectedUser(u) } style={ { display: "flex", flexDirection: "row", width: "100%", maxWidth: "410px", height: "160px", marginBottom: "20px" } }>
+                            <Card key={ u.id } onClick={ () => setSelectedUser(u) } style={ { display: "flex", flexDirection: "row", width: "100%", maxWidth: "420px", height: "160px", marginBottom: "20px" } }>
                                 <Card.Img src={ u.thumbnailUrl } style={ { width: "160px", height: "160px", objectFit: "cover" } } />
                                 <Card.Body>
                                     <Card.Text > { u.title } </Card.Text>
@@ -40,7 +40,8 @@ const SmallCard = () => {
             </Col>
             <Col xs={ 12 } md={ 6 } lg={ 8 } style={ { padding: "0", height: "62vh" } }>
                 <div>
-                    { selectedUser ? <BigCard key={ selectedUser.id } user={ selectedUser } /> : "" }
+                    { selectedUser ? <BigCard key={ selectedUser.id } user={ selectedUser } /> : "" } 
+                  
                 </div>
             </Col>
         </Row>
